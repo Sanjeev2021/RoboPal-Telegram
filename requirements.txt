@@ -2,4 +2,4 @@ os
 telebot
 pyTelegramBotAPI
 openai
-dotenv
+python-dotenv
