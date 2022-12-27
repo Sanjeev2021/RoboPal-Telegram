@@ -1,4 +1,4 @@
-telebot
-PyTelegramBotAPI
+telebot==0.0.3
+PyTelegramBotAPI==2.2.3
 openai
 python-dotenv
