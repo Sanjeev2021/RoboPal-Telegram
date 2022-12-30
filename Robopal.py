@@ -2,6 +2,7 @@ import os
 import telebot
 import openai
 from dotenv import load_dotenv
+import time
 
 load_dotenv()
 
@@ -87,6 +88,8 @@ def send_text(message):
             refined_message = new_message.replace("@robopal_bot", "")
             get_api(message=message, text=refined_message.strip())
                 
-
-bot.polling(1.0)
-bot.idle()
+while True:
+    try:
+        bot.polling(non_stop=True, interval=1, timeout=0)
+    except:
+        time.sleep(5)
